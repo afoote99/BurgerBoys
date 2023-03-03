@@ -24,6 +24,8 @@ class Customer(Person) :
 sListOfNames = list(["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"])
 
 oCust = Customer(sListOfNames)
-print(oCust.order.burger_count)
-oCust.randomName()
-print(oCust.customer_name)
+
+#These lines were to make sure it worked
+#print(oCust.order.burger_count)
+#oCust.randomName()
+#print(oCust.customer_name)
