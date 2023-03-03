@@ -9,21 +9,17 @@ class Order :
         return random.randint(1, 20) 
     
 class Person :
-    def __init__(self, list_of_names) :
-        self.list_of_names = list_of_names
+    def __init__(self) :
+        self.list_of_names = list(["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"])
         self.customer_name = self.randomName()
 
     def randomName(self) :
         return self.list_of_names[random.randint(0, len(self.list_of_names)-1)]
     
 class Customer(Person) :
-    def __init__(self, list_of_names):
-        super().__init__(list_of_names)
+    def __init__(self):
+        super().__init__()
         self.order = Order()
-
-sListOfNames = list(["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"])
-
-oCust = Customer(sListOfNames)
 
 #These lines were to make sure it worked
 #print(oCust.order.burger_count)
