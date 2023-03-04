@@ -4,7 +4,6 @@
 # 3/4/23
 # Hamburger Order Tracker (Group Project)
 
-#Grant Alston
 #Creates all the objects needed for the Hamburger Door Dash assignment
 import random
 class Order :
@@ -26,8 +25,34 @@ class Customer(Person) :
     def __init__(self):
         super().__init__()
         self.order = Order()
+        
+# Creating the variable for the queue of 100 customers
+queueCustomers = []
+for iCount in range(0, 100) :
+    oCust = Customer()
+    queueCustomers.append([oCust.customer_name, oCust.order.burger_count])
+    iCount += 1
 
-#These lines were to make sure it worked
-#print(oCust.order.burger_count)
-#oCust.randomName()
-#print(oCust.customer_name)
+# Create the Customer Dictionary
+dctCustomer = {}
+
+# Get name and # of eaten burgers for every customer from nested list [customer_name, burger_count]
+for iCount in range (len(queueCustomers)) :
+    name = queueCustomers[iCount][0]
+    burgers_eaten = queueCustomers[iCount][1]
+    # If the name has already been added to the dictionary add burgers eaten to exisiting amount, otherwise set burger amount
+    if name in dctCustomer :
+        dctCustomer[name] += burgers_eaten
+    else :
+        dctCustomer[name]= burgers_eaten
+
+# Sorts the customers by how many burgers they've eaten (High-Low)
+lstSortedCustomers = sorted(dctCustomer.items(), key= lambda x: x[1], reverse=True)
+
+# Prints customer names and burgers eaten in order
+print ("\n")
+for iCount in range (len(lstSortedCustomers)) :
+    DisplayName = (lstSortedCustomers[iCount][0]).ljust(19)
+    DisplayBurger = (lstSortedCustomers[iCount][1])
+    print (DisplayName, DisplayBurger)
+print ("\n")
