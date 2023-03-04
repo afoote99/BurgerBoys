@@ -1,3 +1,9 @@
+# IS 303-003
+# Team 8
+# Ian Purnell, Allan Foote, Grant Alston, Keller Elison, Michael Spotts
+# 3/4/23
+# Hamburger Order Tracker (Group Project)
+
 #Grant Alston
 #Creates a queue of 100 customers all with the attributes from the Customer Class found on a different page
 

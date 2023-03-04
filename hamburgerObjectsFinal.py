@@ -1,3 +1,9 @@
+# IS 303-003
+# Team 8
+# Ian Purnell, Allan Foote, Grant Alston, Keller Elison, Michael Spotts
+# 3/4/23
+# Hamburger Order Tracker (Group Project)
+
 #Grant Alston
 #Creates all the objects needed for the Hamburger Door Dash assignment
 import random
