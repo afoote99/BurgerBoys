@@ -28,7 +28,7 @@ class Customer(Person) :
         
 # Creating the variable for the queue of 100 customers
 queueCustomers = []
-for iCount in range(0, 99) :
+for iCount in range(0, 100) :
     oCust = Customer()
     queueCustomers.append([oCust.customer_name, oCust.order.burger_count])
     iCount += 1
